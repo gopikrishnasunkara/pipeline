@@ -1,9 +1,7 @@
-pipeline {
+peline {
 
     agent any 
-	tools {
-        tool name: 'terraform-1.0', type: 'terraform'
-    }
+
     stages {
         stage('git checkout') {
             steps {
@@ -15,7 +13,7 @@ pipeline {
         stage('init') { 
             steps {
                 echo 'This stage will run the test cases of the project..!!'
-                sh '''terraform init''
+                sh '''terraform init'''
                 
             }
         }
@@ -23,7 +21,7 @@ pipeline {
         stage('Plan') { 
             steps {
                 echo 'This stage will build the maven project and packages them into a JAR/WAR'
-                sh '''terraform init''
+                sh '''terraform plan'''
     }
   }
         stage('Apply') { 
