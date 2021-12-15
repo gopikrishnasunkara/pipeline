@@ -23,8 +23,8 @@ resource "aws_s3_bucket" "demo_bucket" {
 }
 
 resource "aws_instance" "my_ec2" {
-  ami           = ami-0b28dfc7adc325ef4
-  instance_type = "t2.micro"
+        ami = "ami-0b28dfc7adc325ef4"
+        instance_type = "t2.micro"
 
   tags = {
     Name = "My-VM-from jenkins"
