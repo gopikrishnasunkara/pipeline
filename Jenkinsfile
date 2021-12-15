@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/vikas-create/IT-AWS-Ops-Dev'
+                git branch: 'main', url: 'https://github.com/gopikrishnasunkara/pipeline'
             }
         }
 
