@@ -9,10 +9,17 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 # Create a VPC demo
 resource "aws_vpc" "example" {
   cidr_block = "10.0.0.0/24"
+
+  tags = {
+	    Owner       = "Vikas
+	    Environment = "dev"
+	    Name = "My-newVPC
+	  }
 }
+
