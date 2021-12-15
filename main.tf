@@ -19,7 +19,7 @@ resource "aws_vpc" "example" {
 }
 
 resource "aws_instance" "my_ec2" {
-        ami = "ami-0b28dfc7adc325ef4"
+        ami = "ami-03af6a70ccd8cb578"
         instance_type = "t2.micro"
         count = 2
 
